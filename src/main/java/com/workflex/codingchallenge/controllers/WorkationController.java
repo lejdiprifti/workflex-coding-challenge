@@ -11,9 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.workflex.codingchallenge.entities.Workation;
 import com.workflex.codingchallenge.services.WorkationService;
 
+import lombok.extern.slf4j.Slf4j;
+
 @CrossOrigin("*")
 @RestController
 @RequestMapping("/workflex")
+@Slf4j
 public class WorkationController {
 
 	@Autowired
@@ -21,6 +24,7 @@ public class WorkationController {
 
 	@GetMapping("/workation")
 	public List<Workation> getAll() {
+		log.debug("getting all workations");
 		return workationService.getAll();
 	}
 

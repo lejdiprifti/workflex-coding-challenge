@@ -26,7 +26,7 @@ class CodingchallengeApplicationTests {
 		Long numberOfRows = workationRepository.count();
 		assertTrue(numberOfRows == 5);
 	}
-	
+
 	@Test
 	public void dataIsCorrect() {
 		Optional<Workation> workation = workationRepository.findById("w1");
